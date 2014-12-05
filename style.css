@@ -1,0 +1,31 @@
+﻿body {
+    background: url("noise.png") #F5F2F0;
+}
+
+/*preload*/
+body:after{
+    display: none;
+    content: url('staples-easy-button.png') url('staples-easy-button-hover.png');
+}
+
+#easyButton {
+    height: 400px;
+    width: 400px;
+    
+    background-size: contain;
+    background-image: url('staples-easy-button.png');
+    
+    cursor: pointer;
+    
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	margin: auto;
+}
+
+#easyButton:hover {
+    background-image: url('staples-easy-button-hover.png');
+}
