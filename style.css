@@ -29,3 +29,29 @@ body:after{
 #easyButton:hover {
     background-image: url('staples-easy-button-hover.png');
 }
+
+
+
+.radio-btn {
+    width: 33%;
+    float: left;
+    text-align: center;
+    height: 50px;
+    background: #abecf1;
+    line-height: 50px;
+    border: 1px solid grey;
+    cursor: pointer;
+    color: white;
+    font-size: 25px
+}
+.radio-btn        { background: #3e7139; }
+.radio-btn:hover  { background: #4c9645; }
+.radio-btn.active { background: #4ca943; }
+
+
+.radio-btn:first-child {
+    border-radius: 5px 0px 0px 5px
+}
+.radio-btn:last-child {
+    border-radius: 0px 5px 5px 0px
+}
