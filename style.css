@@ -2,35 +2,16 @@
     background: url("noise.png") #F5F2F0;
 }
 
-/*preload*/
-body:after{
-    display: none;
-    content: url('staples-easy-button.png') url('staples-easy-button-hover.png');
-}
-
-#easyButton {
-    height: 400px;
+#easySVG {
     width: 400px;
-    
-    background-size: contain;
-    background-image: url('staples-easy-button.png');
-    
-    cursor: pointer;
-    
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	
-	margin: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
-
-#easyButton:hover {
-    background-image: url('staples-easy-button-hover.png');
-}
-
-
 
 .radio-btn {
     width: 33%;
@@ -39,19 +20,14 @@ body:after{
     height: 50px;
     background: #abecf1;
     line-height: 50px;
-    border: 1px solid grey;
+    border: .1px solid grey;
     cursor: pointer;
     color: white;
-    font-size: 25px
+    font-size: 25px;
 }
-.radio-btn        { background: #3e7139; }
+.radio-btn        { background: #3e7139; box-shadow: 1px 1px 1px 0px #3c3333;}
+.radio-btn.active { background: #4ca943; box-shadow: 1px 1px 1px 0px #3c3333, 1px 1px 2px 0px #3c3333 inset;}
 .radio-btn:hover  { background: #4c9645; }
-.radio-btn.active { background: #4ca943; }
 
-
-.radio-btn:first-child {
-    border-radius: 5px 0px 0px 5px
-}
-.radio-btn:last-child {
-    border-radius: 0px 5px 5px 0px
-}
+.radio-btn:first-child { border-radius: 5px 0px 0px 5px }
+.radio-btn:last-child  { border-radius: 0px 5px 5px 0px }

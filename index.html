@@ -1,7 +1,10 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>That Was Easier</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>That Was Easy</title>
     <link rel="icon" href="favicon.ico" />
     <link href="style.css?v=2" rel="stylesheet" type="text/css" />
 </head>
@@ -20,8 +23,89 @@
             <audio id="hematopoiesisAudio" src="Media/hematopoiesis.mp3" type="audio/mp3" />
         </div>        
     </div>
-        
-    <div id="easyButton"></div>
+    
+    <!-- http://jsfiddle.net/KyleMit/46raruoj/ /> -->
+    <svg version="1.1" id="easySVG"
+         baseProfile="full"
+         viewbox="0 0 200 200"
+         width="500" height="500"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+          <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Archivo+Black&text=easy');
+            #easyButton {
+              stroke: #3a3a3a;
+              stroke-width: 2px;
+              cursor: pointer;
+            }
+            #easyButton       {  fill: url(#buttonGradient);  }
+            #easyButton:hover {  fill: url(#hoverButtonGradient);  }
+            #easyButton:active,
+            #easyButton:focus {  fill: url(#activeButtonGradient);  }
+            
+            text {
+              font-family: 'Archivo Black', sans-serif;
+              text-shadow: -1px 1px 10px #af6262;
+              pointer-events: none;
+            }
+         </style>
+         
+         <radialGradient id="baseGradient"
+               cx="53%" cy="47%"
+               r="5%" spreadMethod="reflect">
+              <stop offset="0%" stop-color="#ececec" />
+              <stop offset="100%" stop-color="#c3c3c3" />
+          </radialGradient>
+          
+          <radialGradient id="buttonGradient"
+               cx=".6" cy="0.2" r=".8">
+              <stop offset="0%" stop-color="white" />
+              <stop offset="10%" stop-color="#fe5555" />
+              <stop offset="50%" stop-color="#f61d01" />
+              <stop offset="90%" stop-color="#8c0b03" />
+              <stop offset="100%" stop-color="#4e0200" />
+          </radialGradient>
+          
+          <radialGradient id="hoverButtonGradient"
+               cx=".6" cy="0.2" r=".8">
+              <stop offset="0%" stop-color="white" />
+              <stop offset="20%" stop-color="#fe5555" />
+              <stop offset="60%" stop-color="#f61d01" />
+              <stop offset="95%" stop-color="#8c0b03" />
+              <stop offset="100%" stop-color="#4e0200" />
+          </radialGradient>
+          
+        <radialGradient id="activeButtonGradient"
+               cx=".6" cy="0.2" r=".8">
+              <stop offset="0%" stop-color="white" />
+              <stop offset="15%" stop-color="#fe5555" />
+              <stop offset="30%" stop-color="#f61d01" />
+              <stop offset="95%" stop-color="#8c0b03" />
+              <stop offset="100%" stop-color="#4e0200" />
+          </radialGradient>
+      </defs>
+
+      <g>
+        <circle cx="100" cy="100" r="90" fill="url(#baseGradient)" />
+
+          <circle id="easyButton" cx="100" cy="100" r="80" stroke="black" />
+
+          <text x="100" y="120" 
+                 font-size="50" 
+                 text-anchor="middle" 
+                 fill="white" 
+                 transform="translate(-15,10)rotate(-15)translate(-15,10)">
+                     easy
+          </text>
+      </g>
+
+      
+    </svg>
+
+
+
+
+
     
     <script src="script.js?v=2" type="text/javascript"></script>
 </body>
